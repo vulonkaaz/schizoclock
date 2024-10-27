@@ -3,10 +3,10 @@
 
 int main(void) {
 	time_t CURRENT_TIME = time(NULL);
-	// replace 7200 with your own offset
-	// UTC+2 is 3600*2 = 7200
+	// replace 3600 with your own offset
+	// UTC+1 is 3600*1 = 3600
 	// thats how you change the timezone of this clock
-	int hour = ((CURRENT_TIME+7200)%86400)/3600;
+	int hour = ((CURRENT_TIME+3600)%86400)/3600;
 	int min = (CURRENT_TIME % 3600) / 60;
 	// swatch beat
 	int beat = ((CURRENT_TIME + 3600) % 86400 ) / 86.4;
